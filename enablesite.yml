@@ -1,0 +1,7 @@
+---
+- hosts: vservers
+  become: true
+  tasks:
+    - name: enable httpd service
+      shell:
+        cmd: systemctl enable httpd ; systemctl start httpd
